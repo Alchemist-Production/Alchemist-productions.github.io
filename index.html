@@ -1,228 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>David McInnis - Creative Director & Producer</title>
-    <meta name="description" content="A polymath producer and creative director with 20 years of experience, specializing in transmuting ambitious ideas into remarkable digital experiences.">
-    <meta name="author" content="David McInnis">
-    <meta property="og:title" content="David McInnis - Creative Director & Producer" />
-    <meta property="og:description" content="One Director. Every Discipline. Your Project, Realized." />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://alchemist-productions.github.io/" />
-    <!-- IMPORTANT: Create a 1200x630px preview image, name it 'preview.png', upload it, and uncomment the line below. -->
-    <!-- <meta property="og:image" content="https://alchemist-productions.github.io/preview.png" /> -->
-    
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Lora:ital,wght@0,400;0;700;1,400&display=swap');
-        :root {
-            --bg-color: #12121e;
-            --surface-color: #1a1a2e;
-            --text-color: #c7c7d2;
-            --text-strong: #ffffff;
-            --primary-accent: #f7b733;
-            --secondary-accent: #d4a017;
-            --border-color: #4a4a5e;
-            --font-main: 'Inter', sans-serif;
-            --font-heading: 'Lora', serif;
-        }
-        html { scroll-behavior: smooth; }
-        body {
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            font-family: var(--font-main);
-            margin: 0;
-            padding: 0;
-            line-height: 1.8;
-            font-size: 18px;
-            overflow-x: hidden;
-        }
-        .container { max-width: 900px; margin: 0 auto; padding: 50px 25px; }
-        h1, h2, h3 { font-family: var(--font-heading); font-weight: 700; margin-top: 0; color: var(--text-strong); }
-        h1 { font-size: 3.5rem; text-align: center; }
-        .tagline { text-align: center; font-size: 1.3rem; color: var(--primary-accent); margin-top: -15px; margin-bottom: 80px; font-style: italic; font-family: var(--font-heading); }
-        h2 { font-size: 2.5rem; color: var(--primary-accent); border-bottom: 1px solid var(--border-color); padding-bottom: 15px; margin-bottom: 25px; }
-        h3 { font-size: 1.5rem; margin-bottom: 10px; }
-        p { margin-bottom: 25px; }
-        b, strong { color: var(--primary-accent); font-weight: 700; }
-        section { margin-bottom: 80px; }
-        .reveal { opacity: 0; transform: translateY(40px); transition: opacity 0.8s ease-out, transform 0.8s ease-out; }
-        .reveal.visible { opacity: 1; transform: translateY(0); }
+  <title>Alchemist Productions — David McInnis, Creative Director</title>
+  <meta name="description" content="David McInnis is a polymath creative director and producer specializing in cohesive brand development, live event execution, and digital storytelling." />
+  <meta name="author" content="David McInnis" />
+  <meta property="og:title" content="Alchemist Productions — David McInnis, Creative Director" />
+  <meta property="og:description" content="One Director. Every Discipline. Your Project, Realized." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://alchemist-productions.github.io/" />
 
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; }
-        .card {
-            background-color: var(--surface-color);
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            padding: 30px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .card:hover { transform: translateY(-8px); box-shadow: 0 15px 30px rgba(0,0,0,0.4); }
-        .card .price { font-size: 1.1rem; color: var(--text-color); margin-top: 20px; border-top: 1px solid var(--border-color); padding-top: 15px;}
-        .card .price span { color: var(--primary-accent); font-weight: 700; font-size: 1.5rem;}
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
 
-        .process-step { display: flex; align-items: flex-start; margin-bottom: 30px; }
-        .process-number { font-size: 3rem; font-family: var(--font-heading); color: var(--primary-accent); line-height: 1; margin-right: 20px; opacity: 0.5; }
-        
-        .contact-final { padding: 80px 30px; background: radial-gradient(ellipse at center, var(--surface-color) 0%, var(--bg-color) 70%); border-radius: 8px; }
-        .contact-container { max-width: 700px; margin: 0 auto; text-align: center; }
-        .contact-final h2 { border: none; margin-bottom: 10px; font-size: 2.5rem; }
-        .contact-subtext { font-size: 1.2rem; margin-bottom: 40px; opacity: 0.9; }
-        .contact-form { text-align: left; }
-        .form-row { display: flex; gap: 20px; margin-bottom: 20px; }
-        .form-row .form-group { flex: 1; margin-bottom: 0; }
-        .form-group label { display: block; margin-bottom: 8px; font-weight: 600; }
-        .form-group input, .form-group textarea {
-            width: 100%; padding: 15px; border-radius: 6px; border: 1px solid var(--border-color);
-            background-color: #12121e; color: var(--text-color); font-family: var(--font-main);
-            font-size: 1rem; box-sizing: border-box; transition: border-color 0.3s ease, box-shadow 0.3s ease;
-        }
-        .form-group input:focus, .form-group textarea:focus {
-            outline: none; border-color: var(--primary-accent); box-shadow: 0 0 0 4px rgba(247, 183, 51, 0.15);
-        }
-        .form-group textarea { resize: vertical; min-height: 180px; }
-        .form-submit { text-align: center; margin-top: 30px; }
-        .submit-btn {
-            background-color: var(--primary-accent); color: #12121e; border: none; padding: 16px 40px;
-            border-radius: 50px; font-size: 1.1rem; font-weight: 700; cursor: pointer;
-            transition: all 0.3s ease; letter-spacing: 1px; text-transform: uppercase;
-        }
-        .submit-btn:hover {
-            background-color: var(--secondary-accent); transform: scale(1.05); box-shadow: 0 8px 25px rgba(247, 183, 51, 0.3);
-        }
-        @media (max-width: 768px) {
-            body { font-size: 16px; }
-            h1 { font-size: 2.5rem; }
-            h2 { font-size: 2rem; }
-            .form-row { flex-direction: column; gap: 20px; }
-        }
-    </style>
+  <!-- Fonts & Styles omitted for brevity. Use your original <style> section unchanged -->
+  <style>/* Keep your original styles here */</style>
 </head>
 <body>
-    <div class="container">
-        <header class="reveal">
-            <h1>Alchemist Production</h1>
-            <p class="tagline">One Director. Every Discipline. Your Project, Realized.</p>
-        </header>
+  <div class="container">
+    <header class="reveal">
+      <h1>Alchemist Productions</h1>
+      <p class="tagline">One Director. Every Discipline. Your Project, Realized.</p>
+      <p class="tagline-secondary">
+        I'm David McInnis — a polymath producer with two decades of experience creating unforgettable digital experiences across live broadcast, branding, and narrative design.
+      </p>
+    </header>
 
-        <section class="intro reveal">
-            <p>You have a powerful vision. But turning that vision into a polished, professional reality requires more than just an idea—it requires a unified creative and technical strategy. You need a partner who doesn't just execute tasks, but architects the entire experience.</p>
-            <p>With two decades of hands-on experience, I operate as a complete production house, specializing in bringing ambitious digital projects to life. I provide the singular focus and multi-disciplinary expertise needed to ensure your project is not just completed, but masterfully crafted.</p>
-        </section>
-        
-        <section class="advantage reveal">
-            <h2>The Producer Advantage</h2>
-            <div class="grid">
-                <div class="card">
-                    <h3>A Cohesive Vision</h3>
-                    <p>Your project's soul isn't diluted through layers of management or departmental handoffs. From the first brand concept to the final audio mix, every element is guided by a single, consistent creative direction—mine.</p>
-                </div>
-                <div class="card">
-                    <h3>Radical Efficiency</h3>
-                    <p>By eliminating the friction between separate designers, animators, and engineers, we can iterate faster and more effectively. The result is a higher quality product, delivered with greater speed and agility than a traditional agency model allows.</p>
-                </div>
-                <div class="card">
-                    <h3>A Direct Partnership</h3>
-                    <p>You work directly with the person building your vision. There are no account managers or broken telephone. This ensures clear communication, deep understanding, and a final product that is a true reflection of your goals.</p>
-                </div>
-            </div>
-        </section>
+    <section class="intro reveal">
+      <p>You have a bold vision — something that deserves to feel polished, professional, and unforgettable. But realizing that vision takes more than technical execution. It takes strategy, clarity, and cohesive creative direction.</p>
+      <p>I’m David McInnis, the force behind Alchemist Productions. With 20 years of experience across production, design, music, and live broadcast, I act as your entire creative engine — shaping ideas into masterfully executed results.</p>
+    </section>
 
-        <section class="services reveal">
-            <h2>Example Production Packages</h2>
-            <div class="grid">
-                <div class="card">
-                    <h3>Brand Foundation Package</h3>
-                    <p>The perfect start for a new stream or show. Includes creative consultation, logo design, and a full suite of animated assets (intro, bumpers, overlays) with custom music.</p>
-                    <p class="price">Starting from <span>$1,500</span> USD</p>
-                </div>
-                <div class="card">
-                    <h3>Live Event Production</h3>
-                    <p>Full-service production for a multi-hour live event, like an awards show or product launch. Includes all branding, assets, vMix engineering, and live technical direction during the broadcast.</p>
-                    <p class="price">Starting from <span>$5,000</span> USD</p>
-                </div>
-                <div class="card">
-                    <h3>Full Creative Partnership</h3>
-                    <p>An ongoing retainer for creators who need continuous, high-level production support. This is a comprehensive partnership where I act as your dedicated creative director and producer.</p>
-                    <p class="price"><span>Inquire</span> for Custom Quote</p>
-                </div>
-            </div>
-        </section>
+    <section class="advantage reveal">
+      <h2>The Alchemist Advantage</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>A Cohesive Vision</h3>
+          <p>No hand-offs, no misalignment. Every design choice, asset, and sound is guided by a single, unifying vision — mine.</p>
+        </div>
+        <div class="card">
+          <h3>Radical Efficiency</h3>
+          <p>With no departments to coordinate, we iterate faster, build smarter, and pivot instantly without losing quality.</p>
+        </div>
+        <div class="card">
+          <h3>A Direct Line</h3>
+          <p>No account managers, no broken telephone. You collaborate directly with the person creating your project from end to end.</p>
+        </div>
+      </div>
+    </section>
 
-        <section class="process reveal">
-            <h2>My Engagement Process</h2>
-            <p>I take on a limited number of projects to ensure each receives the focus and dedication it deserves. My process is structured to guarantee clarity, collaboration, and exceptional results.</p>
-            <div class="process-step">
-                <div class="process-number">1</div>
-                <div>
-                    <h3>Consultation & Alignment</h3>
-                    <p>We begin with a deep dive into your vision. I learn about your goals, your audience, and your desired aesthetic. We then forge a clear strategic blueprint for the project.</p>
-                </div>
-            </div>
-            <div class="process-step">
-                <div class="process-number">2</div>
-                <div>
-                    <h3>Design & Execution</h3>
-                    <p>This is where the vision takes shape. I build the assets, engineer the systems, and compose the audio. You'll receive regular updates and key deliverables for feedback, ensuring we're always aligned.</p>
-                </div>
-            </div>
-            <div class="process-step">
-                <div class="process-number">3</div>
-                <div>
-                    <h3>Refinement & Delivery</h3>
-                    <p>The final stage is about polishing every detail. We refine the work until it shines, resulting in a final product that we are both proud to put our names on.</p>
-                </div>
-            </div>
-        </section>
+    <section class="services reveal">
+      <h2>Production Packages & Estimates</h2>
+      <p>These estimates are here to help you frame your project’s scale. Every collaboration is custom, and we’ll shape the scope together based on your timeline, budget, and creative goals.</p>
+      <div class="grid">
+        <div class="card">
+          <h3>Single Asset Production</h3>
+          <p>Need one essential piece, done right? This could be an animated logo, a theme song, or a high-quality visual asset.</p>
+          <p class="price">Starting From: <span>$500 - $1,500+</span></p>
+        </div>
+        <div class="card">
+          <h3>Brand Foundation Package</h3>
+          <p>Perfect for new shows, streams, or podcasts. Includes creative consultation, logo, motion graphics, and music identity.</p>
+          <p class="price">Typical Range: <span>$2,500 - $7,500+</span></p>
+        </div>
+        <div class="card">
+          <h3>Full Live Event Production</h3>
+          <p>Complete broadcast execution — from graphics and music to vMix operation and technical direction.</p>
+          <p class="price"><span>Custom Quote Available</span></p>
+        </div>
+      </div>
+    </section>
 
-        <section class="contact-final reveal">
-            <div class="contact-container">
-                <h2>Let's See If We're a Good Fit.</h2>
-                <p class="contact-subtext">I select projects that offer a unique creative challenge and the potential for a true collaborative partnership. If you believe your project is a match, I would be delighted to hear from you.</p>
-                
-                <form action="https://formspree.io/f/mldljkre" method="POST" class="contact-form">
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="name">Your Name</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Your Email</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Your Vision</label>
-                        <textarea id="message" name="message" required placeholder="Tell me about what you're hoping to create. Please include your goals, timeline, and any links that might be helpful."></textarea>
-                    </div>
-                    <div class="form-submit">
-                        <button type="submit" class="submit-btn">Submit Your Project</button>
-                    </div>
-                </form>
+    <section class="process reveal">
+      <h2>How We Work Together</h2>
+      <p>Creative work flows best when it’s built on clarity, collaboration, and aligned expectations. Here’s what working with me typically looks like:</p>
+
+      <div class="process-step">
+        <div class="process-number">1</div>
+        <div>
+          <h3>Discovery & Blueprint</h3>
+          <p>We start with a focused conversation about your goals, audience, tone, and timeline. If we're aligned, I draft a clear proposal outlining our creative strategy and milestones.</p>
+        </div>
+      </div>
+      <div class="process-step">
+        <div class="process-number">2</div>
+        <div>
+          <h3>Design & Development</h3>
+          <p>I build the assets, direct the creative systems, and integrate your feedback through clear, staged reviews. You stay in the loop — without needing to manage it.</p>
+        </div>
+      </div>
+      <div class="process-step">
+        <div class="process-number">3</div>
+        <div>
+          <h3>Refinement & Delivery</h3>
+          <p>We finalize, polish, and optimize every element. What you receive is launch-ready and built with care — something we’re both proud to share.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-final reveal">
+      <div class="contact-container">
+        <h2>Let’s Bring Your Vision to Life</h2>
+        <p class="contact-subtext">
+          If you’re producing something special and want a creative partner who can elevate every detail — from the first sketch to the final mix — I’d love to hear about it.
+        </p>
+        <p class="contact-subtext">
+          I’m currently booking select projects for Q3 & Q4. Use the form below to start the conversation.
+        </p>
+
+        <form action="https://formspree.io/f/mldljkre" method="POST" class="contact-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" name="name" required />
             </div>
-        </section>
-    </div>
+            <div class="form-group">
+              <label for="email">Your Email</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="message">Your Vision</label>
+            <textarea id="message" name="message" required placeholder="Tell me about what you're hoping to create. Please include your goals, timeline, and any links that might be helpful."></textarea>
+          </div>
+          <div class="form-submit">
+            <button type="submit" class="submit-btn">Start the Conversation</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </div>
 
-    <!-- (The JavaScript for scroll animations remains the same. You have it from the previous version) -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                    }
-                });
-            }, {
-                threshold: 0.1
-            });
-            const revealElements = document.querySelectorAll('.reveal');
-            revealElements.forEach(el => observer.observe(el));
-        });
-
-        // (I have removed the particle background JS for this version to keep it cleaner and more focused. You can add it back if you like!)
-    </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+            }
+          });
+        },
+        {
+          threshold: 0.1,
+        }
+      );
+      const revealElements = document.querySelectorAll('.reveal');
+      revealElements.forEach((el) => observer.observe(el));
+    });
+  </script>
 </body>
 </html>
