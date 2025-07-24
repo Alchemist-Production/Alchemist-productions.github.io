@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>David McInnis - Alchemist Production</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Lora:wght@400;700&display=swap');
+        :root {
+            --bg-color: #1a1a2e;
+            --surface-color: #2a2a3e;
+            --text-color: #e0e0e0;
+            --primary-accent: #f7b733;
+            --secondary-accent: #d4a017;
+            --border-color: #4a4a5e;
+            --font-main: 'Inter', sans-serif;
+            --font-heading: 'Lora', serif;
+        }
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: var(--font-main);
+            margin: 0;
+            padding: 0;
+            line-height: 1.7;
+            font-size: 18px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 50px 25px;
+        }
+        h1, h2, h3 {
+            font-family: var(--font-heading);
+            font-weight: 700;
+            margin-top: 0;
+        }
+        h1 {
+            font-size: 3rem;
+            color: var(--text-color);
+            text-align: center;
+        }
+        .tagline {
+            text-align: center;
+            font-size: 1.25rem;
+            color: var(--primary-accent);
+            margin-top: -15px;
+            margin-bottom: 60px;
+            font-style: italic;
+        }
+        h2 {
+            font-size: 2.2rem;
+            color: var(--primary-accent);
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 15px;
+            margin-bottom: 25px;
+        }
+        h3 {
+            font-size: 1.4rem;
+            color: var(--text-color);
+            margin-bottom: 10px;
+        }
+        p {
+            margin-bottom: 25px;
+        }
+        b, strong {
+           color: var(--primary-accent);
+           font-weight: 600;
+        }
+        section {
+            margin-bottom: 60px;
+        }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+        .service-card {
+            background-color: var(--surface-color);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 25px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+        }
+        .contact-final {
+            padding: 60px 20px;
+            background: radial-gradient(ellipse at center, var(--surface-color) 0%, var(--bg-color) 70%);
+            border-radius: 8px;
+        }
+        .contact-container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .contact-final h2 {
+            border: none;
+            margin-bottom: 10px;
+        }
+        .contact-subtext {
+            font-size: 1.1rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+        .contact-form { text-align: left; }
+        .form-row { display: flex; gap: 20px; margin-bottom: 20px; }
+        .form-row .form-group { flex: 1; margin-bottom: 0; }
+        .form-group label { display: block; margin-bottom: 8px; font-weight: 600; }
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 15px;
+            border-radius: 6px;
+            border: 1px solid var(--border-color);
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: var(--font-main);
+            font-size: 1rem;
+            box-sizing: border-box;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        .form-group input:focus, .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary-accent);
+            box-shadow: 0 0 0 3px rgba(247, 183, 51, 0.2);
+        }
+        .form-group textarea { resize: vertical; min-height: 180px; }
+        .form-submit { text-align: center; margin-top: 30px; }
+        .submit-btn {
+            background-color: var(--primary-accent);
+            color: #1a1a2e;
+            border: none;
+            padding: 15px 35px;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+        .submit-btn:hover {
+            background-color: var(--secondary-accent);
+            transform: scale(1.05);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+        }
+        @media (max-width: 768px) {
+            h1 { font-size: 2.2rem; }
+            h2 { font-size: 1.8rem; }
+            .form-row { flex-direction: column; gap: 20px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>David McInnis</h1>
+            <p class="tagline">Creative Director & Digital Producer</p>
+        </header>
+
+        <section class="intro">
+            <p>You have a powerful idea. A show, a stream, a brand—something you can see clearly in your mind. But building the bridge between that vision and a polished, professional reality is a complex journey filled with technical hurdles and creative dead ends. You need a partner who sees the whole picture.</p>
+            <p><b>I build that bridge.</b></p>
+        </section>
+        
+        <section class="about">
+            <h2>A One-Person Creative Agency</h2>
+            <p>With over 20 years of self-taught, hands-on experience across a vast array of creative and technical disciplines, I offer the holistic expertise of an entire production house in a single, dedicated partner. My strength isn't just mastering one skill; it's in understanding how they all connect—from brand strategy and animation to live broadcast engineering and sound design—to create a single, cohesive, and impactful experience.</p>
+             <p>I thrive on turning nascent concepts into finished products, providing the essential structure, polish, and creative spark that transforms a passion project into a professional production.</p>
+        </section>
+
+        <section class="services">
+            <h2>Core Production Packages</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Full-Service Live Production</h3>
+                    <p>I engineer seamless, on-brand broadcasts from concept to "Go Live." This includes designing all visual assets (overlays, animations), building the technical backend (vMix), managing talent, and ensuring a flawless final stream that captivates your audience.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Brand Identity & Motion Design</h3>
+                    <p>I create a complete visual language that captures the spirit of your brand. This isn't just a logo; it's a full suite of custom animations, intros, and graphics that give your project a unique and memorable identity.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Custom Audio & Soundscaping</h3>
+                    <p>Audio is the soul of a project. I compose original music and create custom sound design to elevate your content—from memorable theme songs and atmospheric Lofi tracks to the precise sound effects that punctuate a key moment.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="process">
+            <h2>How We'll Work Together</h2>
+            <p><b>1. Vision & Strategy:</b> We start with a conversation. I listen to your idea, understand your goals, and help you refine the creative vision. We'll establish the tone, aesthetic, and technical needs of the project.</p>
+            <p><b>2. Creation & Production:</b> I get to work, building out the assets and systems we've planned. This is where the magic happens—where branding, visuals, audio, and tech come together. I provide updates and seek your feedback along the way.</p>
+            <p><b>3. Polish & Delivery:</b> The final stage is about refinement. We'll polish every detail until it shines, ensuring the final product is something we are both incredibly proud of. I'll deliver all the final assets and systems, ready for you to share with the world.</p>
+        </section>
+
+        <section class="contact-final">
+            <div class="contact-container">
+                <h2>Have a project? Let's talk.</h2>
+                <p class="contact-subtext">The first conversation is about discovering if we're a good fit. No pressure, no obligation.</p>
+                
+                <form action="https://formspree.io/f/mldljkre" method="POST" class="contact-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Tell me about your vision</label>
+                        <textarea id="message" name="message" required placeholder="What are you hoping to create? Feel free to include links, your ideal timeline, or any questions you have."></textarea>
+                    </div>
+                    <div class="form-submit">
+                        <button type="submit" class="submit-btn">Start the Conversation</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
