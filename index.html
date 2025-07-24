@@ -1,76 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact — David McInnis, Full-Stack Producer</title>
-  <meta name="description" content="David McInnis is a creative director and full-stack producer specializing in broadcast graphics, sound, vMix layouts, and technical execution." />
-  <meta name="author" content="David McInnis" />
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>David McInnis - Creative Director & Producer</title>
+    
+    <!-- Meta Tags for Professional Sharing -->
+    <meta name="description" content="A multi-disciplinary producer and creative director specializing in turning ambitious ideas into polished, professional digital experiences.">
+    <meta property="og:title" content="David McInnis - Creative Director & Producer" />
+    <meta property="og:description" content="Building the bridge between vision and reality. Let's create something remarkable." />
+    <meta property="og:type" content="website" />
+    <!-- <meta property="og:image" content="https://your-site-url/preview-image.png" /> --> <!-- Optional: Add a preview image URL -->
+
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+    <style>
+        /* --- Google Fonts Import --- */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Lora:ital,wght@0;700;1,400&display=swap');
+
+        /* --- Global Styles & Refined Dark Theme --- */
+        :root {
+            --bg-color: #1c1c1c; /* Deep Charcoal */
+            --surface-color: #2a2a2a; /* Slightly Lighter Charcoal */
+            --text-color: #e4e4e4; /* Soft, readable off-white */
+            --heading-color: #ffffff; /* Pure white for high contrast */
+            --accent-color: #d4af37; /* Sophisticated Gold */
+            --accent-hover: #f7d055; /* Brighter Gold for hover */
+            --font-main: 'Inter', sans-serif;
+            --font-heading: 'Lora', 'Georgia', serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: var(--font-main);
+            margin: 0;
+            padding: 2rem;
+            line-height: 1.7;
+            font-size: 18px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+        }
+
+        h1, h2 {
+            font-family: var(--font-heading);
+            color: var(--heading-color);
+            font-weight: 700;
+        }
+
+        h1 {
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 1rem;
+            letter-spacing: 1px;
+        }
+        
+        .tagline {
+            text-align: center;
+            font-size: 1.2rem;
+            font-style: italic;
+            font-family: var(--font-heading);
+            color: var(--accent-color);
+            margin-bottom: 4rem;
+        }
+
+        h2 {
+            font-size: 2.2rem;
+            margin-top: 4rem;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+            padding-bottom: 0.75rem;
+        }
+
+        p { margin-bottom: 1.5rem; }
+        
+        strong {
+            color: var(--accent-color);
+            font-weight: 600;
+        }
+
+        .contact-form { margin-top: 2rem; }
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 0.85rem;
+            margin-bottom: 1rem;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            border-radius: 6px;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: var(--font-main);
+            font-size: 1rem;
+            box-sizing: border-box;
+            transition: all 0.3s ease;
+        }
+        .contact-form input::placeholder,
+        .contact-form textarea::placeholder {
+            color: #777;
+        }
+        
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            outline: none;
+            border-color: var(--accent-color);
+            box-shadow: 0 0 10px rgba(212, 175, 55, 0.2);
+        }
+        
+        .contact-form button {
+            background-color: var(--accent-color);
+            color: var(--bg-color);
+            border: none;
+            padding: 0.85rem 1.75rem;
+            font-size: 1rem;
+            font-weight: 700;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .contact-form button:hover {
+            background-color: var(--accent-hover);
+        }
+
+        footer {
+            margin-top: 5rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(212, 175, 55, 0.2);
+            font-style: italic;
+            text-align: center;
+            color: #888;
+        }
+    </style>
 </head>
 <body>
-  <div class="container">
-    <header class="reveal">
-      <h1>David McInnis</h1>
-      <p class="tagline">Creative Direction · Live Broadcast · Visual Systems</p>
-      <p class="tagline-secondary">I’m a full-stack producer with two decades of experience turning creative concepts into production-ready systems — from design to live execution.</p>
-    </header>
+    <div class="container">
+        <h1>David McInnis</h1>
+        <p class="tagline">Creative Director & Producer</p>
+        
+        <p>You have a powerful vision. A show, a stream, a brand. But the path from a brilliant idea to a polished, professional reality requires more than a concept—it requires a unified creative and technical strategy. You don't just need a freelancer; you need an architect.</p>
+        <p><strong>I build that bridge.</strong></p>
+        <p>With two decades of hands-on experience across a vast array of creative disciplines, I operate as a complete production house, specializing in bringing ambitious digital projects to life. My strength is not mastery of a single tool, but the holistic expertise to synthesize them all—brand strategy, animation, live broadcast engineering, sound design—into a single, cohesive, and impactful experience.</p>
 
-    <section class="intro reveal">
-      <p>If you need cohesive branding, clean execution, and a no-fluff creative partner — I’m your technical and creative lead. Whether you need a quick turnaround or a full-stack strategy, I deliver end-to-end.</p>
-    </section>
+        <h2>My Process & Philosophy</h2>
+        <p>I am selective about the projects I take on. This ensures every collaboration receives the focus and dedication required to create something truly remarkable. My process is built on a foundation of clarity and partnership.</p>
+        <p><strong>Vision First, Tools Second:</strong> The best work comes from a clear creative vision. The technology is simply the tool we use to realize it. My fluency in a vast suite of creative software allows me to choose the right tool for the job, not the other way around.</p>
+        <p><strong>The Producer Advantage:</strong> Working with me means a direct line from vision to execution. Your project's soul isn't diluted through layers of management. We can iterate faster and more effectively, resulting in a higher quality product delivered with greater agility.</p>
 
-    <section class="services reveal">
-      <h2>Production Packages</h2>
-      <div class="grid">
-        <div class="card">
-          <h3>Single Asset</h3>
-          <p>Motion graphics, stingers, title cards, or music bumpers.</p>
-          <p class="price">From $500–$1,500</p>
-        </div>
-        <div class="card">
-          <h3>Brand Starter Kit</h3>
-          <p>Logo, animation, music theme, and layout design — everything to launch.</p>
-          <p class="price">$2,500–$7,500</p>
-        </div>
-        <div class="card">
-          <h3>Live Event Ops</h3>
-          <p>Graphics, vMix, broadcast flow — full show execution from start to stream.</p>
-          <p class="price">Custom Quote</p>
-        </div>
-      </div>
-    </section>
+        <h2>Contact & Collaboration</h2>
+        <p>If you have a project that requires a dedicated creative and technical partner, I invite you to get in touch. The first conversation is about discovering if we are a good fit. No pressure, no obligation—just a chance to explore the potential.</p>
+        
+        <form action="https://formspree.io/f/mldljkre" method="POST" class="contact-form">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Tell me about your vision..." rows="7" required></textarea>
+            <button type="submit">Initiate Conversation</button>
+        </form>
 
-    <section class="process reveal">
-      <h2>How It Works</h2>
-      <div class="process-step"><div class="process-number">1</div><div><h3>Kickoff</h3><p>We discuss your vision and outline timeline, goals, and deliverables.</p></div></div>
-      <div class="process-step"><div class="process-number">2</div><div><h3>Build</h3><p>I design, animate, produce, and iterate — directly with you — no middle layer.</p></div></div>
-      <div class="process-step"><div class="process-number">3</div><div><h3>Deliver</h3><p>You get polished assets ready to deploy — no fuss, no filler.</p></div></div>
-    </section>
-
-    <section class="contact-final reveal">
-      <h2>Let’s Talk</h2>
-      <p>I’m currently booking select projects. Tell me what you're working on:</p>
-      <form action="https://formspree.io/f/mldljkre" method="POST" class="contact-form">
-        <div class="form-row">
-          <div class="form-group">
-            <label for="name">Your Name</label>
-            <input type="text" id="name" name="name" required />
-          </div>
-          <div class="form-group">
-            <label for="email">Your Email</label>
-            <input type="email" id="email" name="email" required />
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="message">Message</label>
-          <textarea id="message" name="message" rows="5" required placeholder="Project goals, timeline, needs..."></textarea>
-        </div>
-        <div class="form-submit">
-          <button type="submit">Start the Conversation</button>
-        </div>
-      </form>
-    </section>
-  </div>
+        <footer>
+            <p>Crafting digital experiences from concept to completion.</p>
+        </footer>
+    </div>
 </body>
 </html>
