@@ -4,30 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- === PROFESSIONAL META TAGS === -->
-    <title>David McInnis - Alchemist Production</title>
+    <title>David McInnis - Creative Director & Producer</title>
     <meta name="description" content="A polymath producer and creative director with 20 years of experience, specializing in transmuting ambitious ideas into remarkable digital experiences.">
     <meta name="author" content="David McInnis">
-    <!-- Open Graph Tags for Social Media Sharing -->
-    <meta property="og:title" content="David McInnis - Alchemist Production" />
-    <meta property="og:description" content="Crafting Digital Experiences from Concept to Completion." />
+    <meta property="og:title" content="David McInnis - Creative Director & Producer" />
+    <meta property="og:description" content="One Director. Every Discipline. Your Project, Realized." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://alchemist-productions.github.io/" />
-    <!-- IMPORTANT: Create a 1200x630px preview image (a screenshot of the IOCCC trophy animation would be perfect), name it 'preview.png', upload it to your repo, and uncomment the line below. -->
+    <!-- IMPORTANT: Create a 1200x630px preview image, name it 'preview.png', upload it, and uncomment the line below. -->
     <!-- <meta property="og:image" content="https://alchemist-productions.github.io/preview.png" /> -->
     
-    <!-- === FAVICON === -->
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
 
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Lora:ital,wght@0,400;0,700;1,400&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Lora:ital,wght@0,400;0;700;1,400&display=swap');
         :root {
-            --bg-color: #12121e; /* Even deeper space blue */
-            --surface-color: #1a1a2e; /* Original background becomes the surface */
-            --text-color: #c7c7d2; /* Softer, more readable off-white */
+            --bg-color: #12121e;
+            --surface-color: #1a1a2e;
+            --text-color: #c7c7d2;
             --text-strong: #ffffff;
-            --primary-accent: #f7b733; /* Alchemical Gold */
-            --secondary-accent: #d4a017; /* Darker Gold for hover */
+            --primary-accent: #f7b733;
+            --secondary-accent: #d4a017;
             --border-color: #4a4a5e;
             --font-main: 'Inter', sans-serif;
             --font-heading: 'Lora', serif;
@@ -41,28 +38,9 @@
             padding: 0;
             line-height: 1.8;
             font-size: 18px;
-            overflow-x: hidden; /* Prevent horizontal scroll */
+            overflow-x: hidden;
         }
-        
-        /* === IMPROVEMENT: Dynamic Particle Background === */
-        #particle-canvas {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            opacity: 0.4;
-        }
-
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 50px 25px;
-            position: relative; /* Sits on top of the canvas */
-            z-index: 1;
-        }
-
+        .container { max-width: 900px; margin: 0 auto; padding: 50px 25px; }
         h1, h2, h3 { font-family: var(--font-heading); font-weight: 700; margin-top: 0; color: var(--text-strong); }
         h1 { font-size: 3.5rem; text-align: center; }
         .tagline { text-align: center; font-size: 1.3rem; color: var(--primary-accent); margin-top: -15px; margin-bottom: 80px; font-style: italic; font-family: var(--font-heading); }
@@ -71,20 +49,21 @@
         p { margin-bottom: 25px; }
         b, strong { color: var(--primary-accent); font-weight: 700; }
         section { margin-bottom: 80px; }
-        
         .reveal { opacity: 0; transform: translateY(40px); transition: opacity 0.8s ease-out, transform 0.8s ease-out; }
         .reveal.visible { opacity: 1; transform: translateY(0); }
 
-        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
-        .service-card {
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; }
+        .card {
             background-color: var(--surface-color);
             border: 1px solid var(--border-color);
             border-radius: 8px;
             padding: 30px;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-        .service-card:hover { transform: translateY(-8px); box-shadow: 0 15px 30px rgba(0,0,0,0.4); }
-        
+        .card:hover { transform: translateY(-8px); box-shadow: 0 15px 30px rgba(0,0,0,0.4); }
+        .card .price { font-size: 1.1rem; color: var(--text-color); margin-top: 20px; border-top: 1px solid var(--border-color); padding-top: 15px;}
+        .card .price span { color: var(--primary-accent); font-weight: 700; font-size: 1.5rem;}
+
         .process-step { display: flex; align-items: flex-start; margin-bottom: 30px; }
         .process-number { font-size: 3rem; font-family: var(--font-heading); color: var(--primary-accent); line-height: 1; margin-right: 20px; opacity: 0.5; }
         
@@ -117,80 +96,92 @@
         @media (max-width: 768px) {
             body { font-size: 16px; }
             h1 { font-size: 2.5rem; }
-            .tagline { font-size: 1.1rem; }
             h2 { font-size: 2rem; }
             .form-row { flex-direction: column; gap: 20px; }
         }
     </style>
 </head>
 <body>
-    <!-- Dynamic Particle Background -->
-    <canvas id="particle-canvas"></canvas>
-
     <div class="container">
         <header class="reveal">
             <h1>Alchemist Production</h1>
-            <p class="tagline">Crafting Digital Experiences from Concept to Completion</p>
+            <p class="tagline">One Director. Every Discipline. Your Project, Realized.</p>
         </header>
 
         <section class="intro reveal">
-            <p>You have the vision—a show, a stream, a brand. You see its potential. But the path from a brilliant idea to a polished, professional reality is fraught with complexity. You don't just need a freelancer; you need a creative and technical partner who can navigate the entire journey with you.</p>
-            <p><b>I am the alchemist who transmutes that vision into reality.</b></p>
+            <p>You have a powerful vision. But turning that vision into a polished, professional reality requires more than just an idea—it requires a unified creative and technical strategy. You need a partner who doesn't just execute tasks, but architects the entire experience.</p>
+            <p>With two decades of hands-on experience, I operate as a complete production house, specializing in bringing ambitious digital projects to life. I provide the singular focus and multi-disciplinary expertise needed to ensure your project is not just completed, but masterfully crafted.</p>
         </section>
         
-        <section class="about reveal">
-            <h2>A Polymath Producer</h2>
-            <p>For over two decades, I have immersed myself in a diverse range of creative and technical disciplines. I am a self-taught producer, director, designer, animator, composer, and engineer. My strength is not mastery of a single tool, but the holistic expertise to understand how they all harmonize to create something remarkable.</p>
-            <p>I thrive on transforming nascent concepts into finished products, providing the essential structure, polish, and creative spark that elevates a passion project into a professional production worthy of your audience.</p>
+        <section class="advantage reveal">
+            <h2>The Producer Advantage</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>A Cohesive Vision</h3>
+                    <p>Your project's soul isn't diluted through layers of management or departmental handoffs. From the first brand concept to the final audio mix, every element is guided by a single, consistent creative direction—mine.</p>
+                </div>
+                <div class="card">
+                    <h3>Radical Efficiency</h3>
+                    <p>By eliminating the friction between separate designers, animators, and engineers, we can iterate faster and more effectively. The result is a higher quality product, delivered with greater speed and agility than a traditional agency model allows.</p>
+                </div>
+                <div class="card">
+                    <h3>A Direct Partnership</h3>
+                    <p>You work directly with the person building your vision. There are no account managers or broken telephone. This ensures clear communication, deep understanding, and a final product that is a true reflection of your goals.</p>
+                </div>
+            </div>
         </section>
 
         <section class="services reveal">
-            <h2>My Craft: Core Services</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <h3>Live Production & Broadcast Engineering</h3>
-                    <p>I engineer seamless, on-brand broadcasts from concept to "Go Live." This includes designing all visual assets, building the technical backend in vMix, managing talent, and ensuring a flawless final stream.</p>
+            <h2>Example Production Packages</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Brand Foundation Package</h3>
+                    <p>The perfect start for a new stream or show. Includes creative consultation, logo design, and a full suite of animated assets (intro, bumpers, overlays) with custom music.</p>
+                    <p class="price">Starting from <span>$1,500</span> USD</p>
                 </div>
-                <div class="service-card">
-                    <h3>Brand Identity & Motion Design</h3>
-                    <p>I create a complete visual language that captures your brand's soul. This is a full suite of custom animations, intros, and graphics that give your project a unique and memorable identity.</p>
+                <div class="card">
+                    <h3>Live Event Production</h3>
+                    <p>Full-service production for a multi-hour live event, like an awards show or product launch. Includes all branding, assets, vMix engineering, and live technical direction during the broadcast.</p>
+                    <p class="price">Starting from <span>$5,000</span> USD</p>
                 </div>
-                <div class="service-card">
-                    <h3>Custom Audio & Soundscaping</h3>
-                    <p>Audio is the soul of a project. I compose original music and create custom sound design to elevate your content—from memorable themes to atmospheric Lofi tracks and the precise sound effects that punctuate a key moment.</p>
+                <div class="card">
+                    <h3>Full Creative Partnership</h3>
+                    <p>An ongoing retainer for creators who need continuous, high-level production support. This is a comprehensive partnership where I act as your dedicated creative director and producer.</p>
+                    <p class="price"><span>Inquire</span> for Custom Quote</p>
                 </div>
             </div>
         </section>
 
         <section class="process reveal">
-            <h2>The Alchemical Process</h2>
+            <h2>My Engagement Process</h2>
+            <p>I take on a limited number of projects to ensure each receives the focus and dedication it deserves. My process is structured to guarantee clarity, collaboration, and exceptional results.</p>
             <div class="process-step">
                 <div class="process-number">1</div>
-                <div class="process-text">
-                    <h3>Discovery & Strategy</h3>
-                    <p>It begins with a conversation. I listen to your idea, we define your goals, and together, we forge a clear creative and technical vision. This is the blueprint for our success.</p>
+                <div>
+                    <h3>Consultation & Alignment</h3>
+                    <p>We begin with a deep dive into your vision. I learn about your goals, your audience, and your desired aesthetic. We then forge a clear strategic blueprint for the project.</p>
                 </div>
             </div>
             <div class="process-step">
                 <div class="process-number">2</div>
-                <div class="process-text">
-                    <h3>Creation & Production</h3>
-                    <p>I get to work, building the assets and engineering the systems we've planned. This is where the magic happens—where branding, visuals, audio, and tech are synthesized. I value collaboration and will seek your feedback at key milestones.</p>
+                <div>
+                    <h3>Design & Execution</h3>
+                    <p>This is where the vision takes shape. I build the assets, engineer the systems, and compose the audio. You'll receive regular updates and key deliverables for feedback, ensuring we're always aligned.</p>
                 </div>
             </div>
             <div class="process-step">
                 <div class="process-number">3</div>
-                <div class="process-text">
+                <div>
                     <h3>Refinement & Delivery</h3>
-                    <p>The final stage is about polishing every detail until it shines. We ensure the final product is something we are both incredibly proud of. I deliver all the final assets and systems, ready for you to share with the world.</p>
+                    <p>The final stage is about polishing every detail. We refine the work until it shines, resulting in a final product that we are both proud to put our names on.</p>
                 </div>
             </div>
         </section>
 
         <section class="contact-final reveal">
             <div class="contact-container">
-                <h2>Let's Create Something Remarkable</h2>
-                <p class="contact-subtext">The first conversation is about discovering if we're a good fit. No pressure, no obligation. Just a chance to explore the potential.</p>
+                <h2>Let's See If We're a Good Fit.</h2>
+                <p class="contact-subtext">I select projects that offer a unique creative challenge and the potential for a true collaborative partnership. If you believe your project is a match, I would be delighted to hear from you.</p>
                 
                 <form action="https://formspree.io/f/mldljkre" method="POST" class="contact-form">
                     <div class="form-row">
@@ -205,18 +196,18 @@
                     </div>
                     <div class="form-group">
                         <label for="message">Your Vision</label>
-                        <textarea id="message" name="message" required placeholder="What are you hoping to create? Feel free to include links, your ideal timeline, or any questions you have."></textarea>
+                        <textarea id="message" name="message" required placeholder="Tell me about what you're hoping to create. Please include your goals, timeline, and any links that might be helpful."></textarea>
                     </div>
                     <div class="form-submit">
-                        <button type="submit" class="submit-btn">Initiate Contact</button>
+                        <button type="submit" class="submit-btn">Submit Your Project</button>
                     </div>
                 </form>
             </div>
         </section>
     </div>
 
+    <!-- (The JavaScript for scroll animations remains the same. You have it from the previous version) -->
     <script>
-        // === JavaScript for Scroll Animations ===
         document.addEventListener('DOMContentLoaded', function() {
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
@@ -231,104 +222,7 @@
             revealElements.forEach(el => observer.observe(el));
         });
 
-        // === JavaScript for Particle Background ===
-        const canvas = document.getElementById('particle-canvas');
-        const ctx = canvas.getContext('2d');
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-
-        let particlesArray;
-
-        let mouse = {
-            x: null,
-            y: null,
-            radius: (canvas.height/120) * (canvas.width/120)
-        }
-
-        window.addEventListener('mousemove', function(event) {
-            mouse.x = event.x;
-            mouse.y = event.y;
-        });
-        
-        window.addEventListener('resize', function(){
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
-            mouse.radius = (canvas.height/120) * (canvas.width/120);
-            init();
-        });
-
-        class Particle {
-            constructor(x, y, directionX, directionY, size, color) {
-                this.x = x;
-                this.y = y;
-                this.directionX = directionX;
-                this.directionY = directionY;
-                this.size = size;
-                this.color = color;
-            }
-            draw() {
-                ctx.beginPath();
-                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2, false);
-                ctx.fillStyle = 'rgba(247, 183, 51, 0.2)';
-                ctx.fill();
-            }
-            update() {
-                if (this.x > canvas.width || this.x < 0) {
-                    this.directionX = -this.directionX;
-                }
-                if (this.y > canvas.height || this.y < 0) {
-                    this.directionY = -this.directionY;
-                }
-                
-                let dx = mouse.x - this.x;
-                let dy = mouse.y - this.y;
-                let distance = Math.sqrt(dx*dx + dy*dy);
-                if (distance < mouse.radius + this.size){
-                    if(mouse.x < this.x && this.x < canvas.width - this.size * 10){
-                        this.x += 1;
-                    }
-                    if(mouse.x > this.x && this.x > this.size * 10){
-                        this.x -= 1;
-                    }
-                    if(mouse.y < this.y && this.y < canvas.height - this.size * 10){
-                        this.y += 1;
-                    }
-                    if(mouse.y > this.y && this.y > this.size * 10){
-                        this.y -= 1;
-                    }
-                }
-                this.x += this.directionX;
-                this.y += this.directionY;
-                this.draw();
-            }
-        }
-
-        function init() {
-            particlesArray = [];
-            let numberOfParticles = (canvas.height * canvas.width) / 9000;
-            for (let i=0; i < numberOfParticles; i++) {
-                let size = (Math.random() * 2) + 1;
-                let x = (Math.random() * ((innerWidth - size * 2) - (size * 2)) + size * 2);
-                let y = (Math.random() * ((innerHeight - size * 2) - (size * 2)) + size * 2);
-                let directionX = (Math.random() * .2) - .1;
-                let directionY = (Math.random() * .2) - .1;
-                let color = 'rgba(247, 183, 51, 0.2)';
-
-                particlesArray.push(new Particle(x, y, directionX, directionY, size, color));
-            }
-        }
-        
-        function animate() {
-            requestAnimationFrame(animate);
-            ctx.clearRect(0,0,innerWidth, innerHeight);
-
-            for (let i = 0; i < particlesArray.length; i++) {
-                particlesArray[i].update();
-            }
-        }
-        
-        init();
-        animate();
+        // (I have removed the particle background JS for this version to keep it cleaner and more focused. You can add it back if you like!)
     </script>
 </body>
 </html>
